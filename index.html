@@ -10,7 +10,6 @@
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
 </head>
 <body>
-    <!-- Loader -->
     <div class="loader">
         <div class="loader-content">
             <div class="loader-spinner"></div>
@@ -18,27 +17,27 @@
         </div>
     </div>
 
-    <!-- Custom Cursor -->
+    
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <!-- Scroll Progress -->
+   
     <div class="scroll-progress">
         <div class="scroll-bar"></div>
     </div>
 
-    <!-- Back to Top -->
+    
     <button class="back-to-top">
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- Theme Toggle -->
+    
     <button class="theme-toggle">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
     </button>
 
-    <!-- Navigation -->
+    
     <nav class="navbar">
         <div class="nav-container">
             <a href="#home" class="nav-logo">YM<span class="logo-dot">.</span></a>
@@ -66,11 +65,8 @@
                 </button>
             </div>
         </div>
-    </nav>
-
-    <!-- Main Content -->
+    </nav>  
     <main>
-        <!-- Hero Section -->
         <section id="home" class="hero">
             <div class="hero-container">
                 <div class="hero-content">
@@ -107,8 +103,8 @@
                             <span class="stat-label">Years Experience</span>
                         </div>
                         <div class="stat">
-                            <span class="stat-number" data-count="10">0</span>
-                            <span class="stat-label">Happy Clients</span>
+                            <span class="stat-number" data-count="10" style="display: none;">0</span>
+                            <span class="stat-label" style="display: none;">Happy Clients</span>
                         </div>
                     </div>
                 </div>
@@ -140,15 +136,12 @@ function buildProject(idea) {
                 </div>
             </div>
         </section>
-
-        <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">About <span class="highlight">Me</span></h2>
                     <p class="section-subtitle">Get to know me better</p>
                 </div>
-                
                 <div class="about-container">
                     <div class="about-image">
                         <div class="image-frame">
@@ -162,8 +155,8 @@ function buildProject(idea) {
                                 <i class="fas fa-database"></i>
                             </div>
                         </div>
-                    </div>
-                    
+                    </div>  
+
                     <div class="about-content">
                         <h3>Full Stack Developer & Software Engineering Student</h3>
                         <p>
@@ -171,7 +164,7 @@ function buildProject(idea) {
                             while working on real-world projects. I enjoy creating efficient, scalable solutions 
                             that solve real-world problems using modern web technologies.
                         </p>
-                        
+              
                         <div class="about-tabs">
                             <div class="tab-buttons">
                                 <button class="tab-btn active" data-tab="experience">Experience</button>
@@ -214,8 +207,6 @@ function buildProject(idea) {
                 </div>
             </div>
         </section>
-
-        <!-- Skills Section -->
         <section id="skills" class="skills">
             <div class="container">
                 <div class="section-header">
@@ -224,22 +215,20 @@ function buildProject(idea) {
                 </div>
                 
                 <div class="skills-filter">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <button class="filter-btn" data-filter="frontend">Frontend</button>
-                    <button class="filter-btn" data-filter="backend">Backend</button>
-                    <button class="filter-btn" data-filter="tools">Tools</button>
-                    <button class="filter-btn" data-filter="soft">Soft Skills</button>
+                    <button class="filter-btn active" data-filter="all" >All</button>
+                    <button class="filter-btn" data-filter="frontend" >Frontend</button>
+                    <button class="filter-btn" data-filter="backend" >Backend</button>
+                    <button class="filter-btn" data-filter="tools" >Tools</button>
+                    <button class="filter-btn" data-filter="soft" >Soft Skills</button>
                 </div>
                 
                 <div class="skills-grid">
-                    <!-- Skills will be populated by JavaScript -->
                 </div>
                 
                 <div class="skills-chart">
     <h3 style="text-align: center; margin-bottom: 30px; color: var(--primary-color);">Skills Overview</h3>
     
     <div class="simple-chart">
-        <!-- Frontend -->
         <div class="chart-category">
             <div class="category-label">Frontend</div>
             <div class="chart-bar">
@@ -248,7 +237,7 @@ function buildProject(idea) {
             <div class="chart-value">85%</div>
         </div>
         
-        <!-- Backend -->
+    
         <div class="chart-category">
             <div class="category-label">Backend</div>
             <div class="chart-bar">
@@ -257,7 +246,7 @@ function buildProject(idea) {
             <div class="chart-value">80%</div>
         </div>
         
-        <!-- Database -->
+        
         <div class="chart-category">
             <div class="category-label">Database</div>
             <div class="chart-bar">
@@ -266,7 +255,7 @@ function buildProject(idea) {
             <div class="chart-value">82%</div>
         </div>
         
-        <!-- Tools -->
+        
         <div class="chart-category">
             <div class="category-label">Tools</div>
             <div class="chart-bar">
@@ -275,7 +264,7 @@ function buildProject(idea) {
             <div class="chart-value">80%</div>
         </div>
         
-        <!-- Soft Skills -->
+        
         <div class="chart-category">
             <div class="category-label">Soft Skills</div>
             <div class="chart-bar">
@@ -287,7 +276,7 @@ function buildProject(idea) {
             </div>
         </section>
 
-        <!-- Projects Section -->
+        
         <section id="projects" class="projects">
             <div class="container">
                 <div class="section-header">
@@ -307,7 +296,7 @@ function buildProject(idea) {
             </div>
         </section>
 
-        <!-- Experience Section -->
+        
         <section id="experience" class="experience">
             <div class="container">
                 <div class="section-header">
@@ -316,12 +305,12 @@ function buildProject(idea) {
                 </div>
                 
                 <div class="timeline">
-                    <!-- Timeline items will be populated by JavaScript -->
+                    
                 </div>
             </div>
         </section>
 
-        <!-- Education Section -->
+        
         <section id="education" class="education">
             <div class="container">
                 <div class="section-header">
@@ -330,19 +319,17 @@ function buildProject(idea) {
                 </div>
                 
                 <div class="education-grid">
-                    <!-- Education items will be populated by JavaScript -->
+                    
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="contact">
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
                     <p class="section-subtitle">Let's work together</p>
                 </div>
-                
                 <div class="contact-container">
                     <div class="contact-info">
                         <div class="contact-card">
@@ -355,7 +342,7 @@ function buildProject(idea) {
                                 <a href="mailto:yahyamezni2017@gmail.com">Send Message</a>
                             </div>
                         </div>
-                        
+            
                         <div class="contact-card">
                             <div class="contact-icon">
                                 <i class="fas fa-phone"></i>
@@ -374,7 +361,7 @@ function buildProject(idea) {
                             <div class="contact-details">
                                 <h3>Location</h3>
                                 <p>Tunisia</p>
-                                <a href="#" class="view-map">View on Map</a>
+                                <a href="https://www.google.com/maps/place/Tunisie/data=!4m2!3m1!1s0x125595448316a4e1:0x3a84333aaa019bef?sa=X&ved=1t:242&ictx=111" class="view-map">View on Map</a>
                             </div>
                         </div>
                     </div>
@@ -399,7 +386,7 @@ function buildProject(idea) {
         </section>
     </main>
 
-    <!-- Footer -->
+    
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -441,7 +428,7 @@ function buildProject(idea) {
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 Yahya Mezni. All rights reserved.</p>
+                <p>&copy; 2026 Yahya Mezni. All rights reserved.</p>
                 <div class="footer-extra">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -450,7 +437,7 @@ function buildProject(idea) {
         </div>
     </footer>
 
-    <!-- Scripts -->
+    
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="index.js"></script>
 </body>

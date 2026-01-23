@@ -307,7 +307,7 @@ function initEducation() {
         {
             degree: 'Full Stack Web Development',
             school: 'Udemy, GOMYCODE, 9ANTRA-THE BRIDGE',
-            date: '2023 - 2024',
+            date: '2025 - 2026',
             icon: 'fas fa-laptop-code'
         }
     ];
@@ -335,13 +335,13 @@ function initEducation() {
 function initExperience() {
     const experiences = [
         {
-            date: '2023 - Present',
+            date: '2026 - Present',
             title: 'Full Stack Developer',
             company: 'Freelance & Personal Projects',
             description: 'Developing web applications using React, Node.js, and PostgreSQL. Building responsive websites and working on various projects to build practical skills and portfolio.'
         },
         {
-            date: '2022 - 2023',
+            date: '2025 - Present',
             title: 'Web Development Trainee',
             company: 'Training Programs',
             description: 'Completed intensive training in full stack web development through Udemy, GOMYCODE, and 9ANTRA-THE BRIDGE programs. Gained hands-on experience with modern web technologies.'
