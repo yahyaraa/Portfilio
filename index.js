@@ -375,37 +375,49 @@ function initProjects() {
             title: 'E-Commerce Platform',
             description: 'Full-featured e-commerce platform with user authentication, product management, and shopping cart functionality.',
             tags: ['React', 'Node.js', 'PostgreSQL', 'Express'],
-            image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop'
+            image: 'Company.jpeg',
+            liveUrl: 'construction.html',  
+            codeUrl: 'construction.html'  
         },
         {
             title: 'Task Management System',
             description: 'Collaborative task management application with user authentication and real-time updates.',
             tags: ['React.js', 'Node.js', 'PostgreSQL', 'JWT'],
-            image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&auto=format&fit=crop'
+            image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&auto=format&fit=crop',
+            liveUrl: 'construction.html',  
+            codeUrl: 'construction.html'
         },
         {
             title: 'University Management System',
             description: 'System for managing student records, courses, and academic information for educational institutions.',
             tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
-            image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop'
+            image: 'University.jpeg',
+            liveUrl: 'construction.html',  
+            codeUrl: 'construction.html'
         },
         {
             title: 'Weather Dashboard',
             description: 'Real-time weather application with location-based forecasts and interactive data visualization.',
             tags: ['JavaScript', 'API Integration', 'CSS3', 'HTML5'],
-            image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop'
+            image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop',
+            liveUrl: 'construction.html',
+            codeUrl: 'construction.html'
         },
         {
             title: 'Portfolio Website',
             description: 'Modern responsive portfolio website showcasing projects and skills with animations.',
             tags: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop'
+            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop',
+            liveUrl: 'index.html',  // LIEN VERS TON PORTFOLIO
+            codeUrl: 'https://github.com/yahyaraa/Portfilio'
         },
         {
             title: 'Blog Platform',
             description: 'Full-featured blog platform with user authentication, CRUD operations, and commenting system.',
             tags: ['Node.js', 'Express', 'MongoDB', 'EJS'],
-            image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop'
+            image: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop',
+            liveUrl: 'construction.html',
+            codeUrl: 'construction.html'
         }
     ];
     
@@ -426,10 +438,12 @@ function initProjects() {
                 <h3 class="project-title">${project.title}</h3>
                 <p class="project-description">${project.description}</p>
                 <div class="project-links">
-                    <a href="#" class="btn btn-primary btn-sm">
-                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    <a href="${project.liveUrl}" class="btn btn-primary" 
+                       ${project.liveUrl !== 'index.html' ? 'target="_blank"' : ''}>
+                        <i class="fas fa-external-link-alt"></i> 
+                        ${project.liveUrl === 'index.html' ? 'View Live' : 'Live Demo'}
                     </a>
-                    <a href="#" class="btn btn-secondary btn-sm">
+                    <a href="${project.codeUrl}" class="btn btn-secondary" target="_blank">
                         <i class="fab fa-github"></i> Source Code
                     </a>
                 </div>
