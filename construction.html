@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio en construction | Yahya Mezni</title>
+    <title>Portfolio Under Construction | Yahya Mezni</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -24,7 +24,8 @@
             justify-content: center;
             text-align: center;
             padding: 2rem;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
         }
 
         .container {
@@ -57,57 +58,68 @@
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             margin-bottom: 1rem;
             background: linear-gradient(90deg, #00ffd1, #6c63ff);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
+            padding: 0 1rem;
         }
 
         .subtitle {
-            font-size: 1.5rem;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
             color: #a0a0c0;
             margin-bottom: 2rem;
+            padding: 0 1rem;
         }
 
         .message {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             line-height: 1.8;
             color: #ccc;
             margin-bottom: 3rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            padding: 0 1rem;
         }
 
         .countdown {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: clamp(0.5rem, 2vw, 1.5rem);
             margin-bottom: 3rem;
+            flex-wrap: wrap;
+            padding: 0 1rem;
         }
 
         .countdown-item {
             background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
+            padding: clamp(1rem, 2vw, 1.5rem);
             border-radius: 15px;
-            min-width: 100px;
+            min-width: clamp(70px, 15vw, 100px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(0, 255, 209, 0.2);
+            flex: 1;
+            max-width: 120px;
         }
 
         .countdown-number {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             font-weight: 700;
             color: #00ffd1;
             display: block;
+            line-height: 1;
+            margin-bottom: 0.5rem;
         }
 
         .countdown-label {
-            font-size: 0.9rem;
+            font-size: clamp(0.7rem, 2vw, 0.9rem);
             color: #a0a0c0;
             text-transform: uppercase;
             letter-spacing: 1px;
+            display: block;
         }
 
         .progress-container {
@@ -118,6 +130,7 @@
             border-radius: 10px;
             height: 20px;
             overflow: hidden;
+            padding: 0 1rem;
         }
 
         .progress-bar {
@@ -136,17 +149,21 @@
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.8rem;
-            padding: 1rem 2.5rem;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2.5rem);
             background: #00ffd1;
             color: #0f111a;
             text-decoration: none;
             border-radius: 10px;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             transition: all 0.3s ease;
             border: none;
             cursor: pointer;
+            min-width: 200px;
+            max-width: 300px;
+            margin: 0.5rem;
         }
 
         .btn:hover {
@@ -170,27 +187,30 @@
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            padding: 0 1rem;
         }
 
         .floating-elements {
-            position: absolute;
+            position: fixed;
             width: 100%;
             height: 100%;
             pointer-events: none;
             z-index: 1;
+            top: 0;
+            left: 0;
         }
 
         .floating-element {
             position: absolute;
             color: rgba(0, 255, 209, 0.1);
-            font-size: 2rem;
+            font-size: clamp(1.5rem, 3vw, 2rem);
             animation: float 6s ease-in-out infinite;
         }
 
-        .floating-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
-        .floating-element:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
-        .floating-element:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
-        .floating-element:nth-child(4) { bottom: 20%; right: 10%; animation-delay: 3s; }
+        .floating-element:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { top: 20%; right: 5%; animation-delay: 1s; }
+        .floating-element:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 2s; }
+        .floating-element:nth-child(4) { bottom: 20%; right: 5%; animation-delay: 3s; }
         .floating-element:nth-child(5) { top: 40%; left: 50%; animation-delay: 4s; }
 
         @keyframes float {
@@ -198,14 +218,91 @@
             50% { transform: translateY(-20px) rotate(10deg); }
         }
 
+        /* Media Queries spécifiques pour mobile */
         @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .subtitle { font-size: 1.2rem; }
-            .countdown { gap: 0.8rem; }
-            .countdown-item { min-width: 80px; padding: 1rem; }
-            .countdown-number { font-size: 2rem; }
-            .buttons { flex-direction: column; align-items: center; }
-            .btn { width: 100%; max-width: 300px; justify-content: center; }
+            body {
+                padding: 1rem;
+                justify-content: flex-start;
+                min-height: 100vh;
+                overflow-y: auto;
+            }
+            
+            .container {
+                margin-top: 1rem;
+            }
+            
+            .countdown {
+                gap: 0.5rem;
+                margin: 2rem 0;
+            }
+            
+            .countdown-item {
+                min-width: 70px;
+                padding: 1rem 0.5rem;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            /* Assure que le contenu n'est pas caché */
+            .message, .subtitle, h1 {
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .countdown-item {
+                min-width: 60px;
+                padding: 0.8rem 0.3rem;
+            }
+            
+            .countdown-number {
+                font-size: 1.5rem;
+            }
+            
+            .countdown-label {
+                font-size: 0.6rem;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .message {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Pour les très petits écrans */
+        @media (max-height: 700px) and (max-width: 768px) {
+            .container {
+                padding-top: 1rem;
+            }
+            
+            .construction-icon {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+            
+            .countdown {
+                margin: 1rem 0;
+            }
+            
+            .message {
+                margin-bottom: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -225,25 +322,25 @@
             <i class="fas fa-tools"></i>
         </div>
         
-        <h1>Portfolio en Construction</h1>
+        <h1>Portfolio Under Construction</h1>
         
         <div class="subtitle">
-            Quelque chose d'incroyable arrive bientôt !
+            Something amazing is coming soon!
         </div>
         
         <div class="message">
-            Je suis actuellement en train de finaliser mon portfolio pour vous offrir la meilleure expérience.
-            Le site sera disponible très prochainement avec tous mes projets, compétences et réalisations.
+            I'm currently finalizing my portfolio to provide you with the best experience.
+            The site will be available very soon with all my projects, skills, and achievements.
         </div>
         
         <div class="countdown">
             <div class="countdown-item">
                 <span class="countdown-number" id="days">00</span>
-                <span class="countdown-label">Jours</span>
+                <span class="countdown-label">Days</span>
             </div>
             <div class="countdown-item">
                 <span class="countdown-number" id="hours">00</span>
-                <span class="countdown-label">Heures</span>
+                <span class="countdown-label">Hours</span>
             </div>
             <div class="countdown-item">
                 <span class="countdown-number" id="minutes">00</span>
@@ -251,7 +348,7 @@
             </div>
             <div class="countdown-item">
                 <span class="countdown-number" id="seconds">00</span>
-                <span class="countdown-label">Secondes</span>
+                <span class="countdown-label">Seconds</span>
             </div>
         </div>
         
@@ -261,10 +358,10 @@
         
         <div class="buttons">
             <button class="btn" id="enterBtn">
-                <i class="fas fa-arrow-right"></i> Accéder au Portfolio (Beta)
+                <i class="fas fa-arrow-right"></i> Access Portfolio (Beta)
             </button>
             <a href="mailto:yahyamezni2017@gmail.com" class="btn btn-secondary">
-                <i class="fas fa-envelope"></i> Me Contacter
+                <i class="fas fa-envelope"></i> Contact Me
             </a>
         </div>
     </div>
@@ -290,7 +387,7 @@
             
             if (distance < 0) {
                 clearInterval(countdownInterval);
-                document.querySelector('.countdown').innerHTML = '<div class="message">Le portfolio est maintenant disponible !</div>';
+                document.querySelector('.countdown').innerHTML = '<div class="message">The portfolio is now available!</div>';
             }
         }
         
@@ -318,8 +415,8 @@
                 <div style="font-size: 4rem; color: #00ffd1; margin-bottom: 2rem; animation: spin 1s linear infinite;">
                     <i class="fas fa-spinner"></i>
                 </div>
-                <div style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">
-                    Chargement du portfolio...
+                <div style="font-size: 1.5rem; color: #fff; margin-bottom: 1rem; text-align: center;">
+                    Loading portfolio...
                 </div>
                 <div style="width: 300px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
                     <div style="width: 0%; height: 100%; background: #00ffd1; border-radius: 2px; animation: loading 2s ease-in-out forwards;"></div>
@@ -342,6 +439,23 @@
         elements.forEach((element, index) => {
             element.style.animationDelay = `${index * 0.5}s`;
         });
+        
+        // Correction pour mobile : forcer le redimensionnement
+        window.addEventListener('resize', function() {
+            updateCountdown();
+        });
+        
+        // Correction pour iOS/Safari
+        document.addEventListener('touchmove', function(e) {
+            if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 10) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        // Initialiser pour mobile
+        if (/Mobi|Android/i.test(navigator.userAgent)) {
+            document.body.style.minHeight = window.innerHeight + 'px';
+        }
     </script>
 </body>
 </html>
