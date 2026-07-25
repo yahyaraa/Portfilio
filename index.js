@@ -375,7 +375,7 @@ function initProjects() {
             title: 'E-Ticket Platform',
             description: 'Full-featured e-Ticket platform with user authentication, ticket management, and payment functionality.',
             tags: ['React', 'Node.js', 'mongoDB', 'Express'],
-            image: 'img/transtu_post.png',
+            image: 'transtu_post.png',
             liveUrl: 'https://transtu.netlify.app/',  
             codeUrl: 'https://github.com/yahyaraa/Portfilio.git'  
         },
@@ -393,7 +393,6 @@ function initProjects() {
             tags: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
             image: 'University.jpeg',
             liveUrl: 'construction.html',  
-
             codeUrl: 'construction.html'
         },
         {
